@@ -2,10 +2,10 @@
 
 ## Angular OOP: Beginner to Intermediate Guide
 
-  Part 1: Beginner Concepts
-  1. Classes in TypeScript/Angular
-  Angular is built with TypeScript, which fully supports OOP. 
-  A class is a blueprint for creating objects.
+Part 1: Beginner Concepts
+1. Classes in TypeScript/Angular
+Angular is built with TypeScript, which fully supports OOP. 
+A class is a blueprint for creating objects.
 ```
   // Basic class
   export class User {
@@ -27,9 +27,9 @@
   console.log(user.greet()); // "Hello, I'm John" 
 ```
 
-  2. Components as Classes
+2. Components as Classes
 
-  Angular components are classes decorated with@Component:
+Angular components are classes decorated with@Component:
 ```
   import { Component } from '@angular/core';
 
@@ -52,7 +52,7 @@
 
 3. Encapsulation (Access Modifiers)
 
-  Control access to class members:
+Control access to class members:
 ```
   export class BankAccount {
     public accountNumber: string;      // Accessible everywhere
@@ -78,9 +78,9 @@
     }
   }
 ```
-  4. Services as Singleton Classes
+4. Services as Singleton Classes
 
-  Angular services are reusable classes for business logic:
+Angular services are reusable classes for business logic:
 ```
   import { Injectable } from '@angular/core';
 
@@ -103,12 +103,12 @@
     }
   }
 ```
-  ---
-  Part 2: Intermediate Concepts
+---
+Part 2: Intermediate Concepts
 
-  1. Inheritance
+1. Inheritance
 
-  Extend classes to reuse and specialize behavior:
+Extend classes to reuse and specialize behavior:
 ```
   // Base class
   export class Animal {
@@ -154,9 +154,9 @@
   dog.move(10);    // "Rex moved 10m"
   dog.fetch();     // "Rex fetches the ball"
 ```
-  2. Polymorphism
+2. Polymorphism
 
-  Same interface, different implementations:
+Same interface, different implementations:
 ```
   // Interface for shape
   interface Shape {
@@ -198,9 +198,9 @@
     }
   }
 ```
-  3. Abstract Classes
+3. Abstract Classes
 
-  Define common structure with some implementation:
+Define common structure with some implementation:
 ```
   export abstract class BaseComponent {
     protected data: any[] = [];
@@ -237,9 +237,9 @@
     }
   }
 ```
-  4. Interfaces in Angular
+4. Interfaces in Angular
 
-  Define contracts for classes:
+Define contracts for classes:
 ```
   // Model interfaces
   export interface IUser {
@@ -290,9 +290,9 @@
     }
   }
 ```
-  5. Dependency Injection (DI)
+5. Dependency Injection (DI)
 
-  Angular's DI system follows OOP principles:
+Angular's DI system follows OOP principles:
 ```
   // Service with dependencies
   @Injectable({
@@ -327,7 +327,7 @@
     }
   }
 ```
-  6. Design Patterns in Angular
+6. Design Patterns in Angular
 ```
   Singleton Pattern (via DI):
   @Injectable({ providedIn: 'root' })
@@ -373,9 +373,9 @@
     }
   }
 ```
-  7. Generic Classes
+7. Generic Classes
 
-  Create reusable components with type safety:
+Create reusable components with type safety:
 ```
   export class DataStore<T> {
     private items: T[] = [];
@@ -401,14 +401,14 @@
   productStore.add({ id: 1, name: 'Laptop', price: 999 });
   ```
 
- ---
-  #### Key Principles to Remember
+---
+#### Key Principles to Remember
 
-  1. Single Responsibility: Each class should have one reason to change
-  2. Separation of Concerns: Components handle UI, Services handle logic
-  3. DRY (Don't Repeat Yourself): Use inheritance and composition
-  4. Composition over Inheritance: Favor injecting services over extending classes
-  5. Type Safety: Use TypeScript's type system fully
+1. Single Responsibility: Each class should have one reason to change
+2. Separation of Concerns: Components handle UI, Services handle logic
+3. DRY (Don't Repeat Yourself): Use inheritance and composition
+4. Composition over Inheritance: Favor injecting services over extending classes
+5. Type Safety: Use TypeScript's type system fully
 
 ---
 #### Practice Exercise
